@@ -19,7 +19,7 @@ const Navbar = () => {
           href="#home"
           className="bg-gradient-to-r from-sky-500 from-20% via-yellow-500 via-50% to-pink-500 bg-clip-text text-3xl font-semibold text-transparent opacity-80 transition-all duration-300 hover:opacity-100"
         >
-          npkav.dev
+          [npkav.dev]
         </a>
 
         {/* regular navigation */}
@@ -27,25 +27,25 @@ const Navbar = () => {
           <li>
             <a
               href="#technologies"
-              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
+              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500"
             >
-              technologies
+              [technologies]
             </a>
           </li>
           <li>
             <a
               href="#projects"
-              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
+              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500"
             >
-              projects
+              [projects]
             </a>
           </li>
           <li>
             <a
               href="#contact"
-              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
+              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-pink-500"
             >
-              contact
+              [contact]
             </a>
           </li>
         </ul>
@@ -108,7 +108,7 @@ const Navbar = () => {
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
                 onClick={toggleMenu}
               >
-                technologies
+                [technologies]
               </a>
             </li>
             <li>
@@ -117,7 +117,7 @@ const Navbar = () => {
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
                 onClick={toggleMenu}
               >
-                projects
+                [projects]
               </a>
             </li>
             <li>
@@ -126,7 +126,7 @@ const Navbar = () => {
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
                 onClick={toggleMenu}
               >
-                contact
+                [contact]
               </a>
             </li>
             {/* mobile social icons */}
