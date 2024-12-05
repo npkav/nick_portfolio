@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-10 flex w-full flex-col items-center justify-between border-b border-b-gray-700 bg-black/70 px-16 py-6 text-white backdrop-blur-md">
+    <nav className="fixed top-0 z-10 flex w-full flex-col items-center justify-between border-b border-b-gray-700 bg-slate-950/90 px-16 py-6 text-white backdrop-blur-md">
       <div className="flex w-full items-center justify-between md:justify-evenly">
         <a
           href="#home"
