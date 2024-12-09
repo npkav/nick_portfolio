@@ -7,6 +7,7 @@ import { SiFramer } from "react-icons/si";
 import { SiFigma } from "react-icons/si";
 import { SiWebrtc } from "react-icons/si";
 import { SiTrello } from "react-icons/si";
+import { SiAffinityphoto } from "react-icons/si";
 
 const Technologies = () => {
   return (
@@ -42,6 +43,9 @@ const Technologies = () => {
         </div>
         <div className="text-[50px] sm:text-[75px] md:text-[100px] cursor-pointer opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300">
           <SiTrello />
+        </div>
+        <div className="text-[50px] sm:text-[75px] md:text-[100px] cursor-pointer opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300">
+          <SiAffinityphoto />
         </div>
       </div>
     </div>
