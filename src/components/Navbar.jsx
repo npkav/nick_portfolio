@@ -11,82 +11,90 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  /* scroll to section function */
+  const scrollToSection = (sectionId) => {
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 z-10 flex w-full flex-col items-center justify-between border-b border-b-gray-700 bg-slate-950/90 px-16 py-6 text-white backdrop-blur-md">
       <div className="flex w-full items-center justify-between md:justify-evenly">
-        <a
-          href="#home"
+        <button
+          onClick={() => scrollToSection('home')}
           className="bg-gradient-to-r from-sky-500 from-20% via-yellow-500 via-50% to-pink-500 bg-clip-text text-3xl font-semibold text-transparent opacity-80 transition-all duration-300 hover:opacity-100"
         >
           [npkav.dev]
-        </a>
+        </button>
 
         {/* regular navigation */}
         <ul className="hidden md:flex gap-10">
           <li>
-            <a
-              href="#technologies"
+            <button
+              onClick={() => scrollToSection('technologies')}
               className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500"
             >
               [technologies]
-            </a>
+            </button>
           </li>
           <li>
-            <a
-              href="#projects"
+            <button
+              onClick={() => scrollToSection('projects')}
               className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500"
             >
               [projects]
-            </a>
+            </button>
           </li>
           <li>
-            <a
-              href="#contact"
+            <button
+              onClick={() => scrollToSection('contact')}
               className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-pink-500"
             >
               [contact]
-            </a>
+            </button>
           </li>
         </ul>
 
         {/* social icons */}
         <ul className="hidden md:grid grid-cols-2 gap-4">
           <li>
-            <a
-              href="https://github.com/npkav"
-              target="_blank"
+            <button
+              onClick={() => window.open('https://github.com/npkav', '_blank')}
               className="text-xl opacity-40 transition-all duration-300 hover:opacity-100"
             >
               <FaGithub />
-            </a>
+            </button>
           </li>
           <li>
-            <a
-              href="https://npkav.dev/resume.pdf"
-              target="_blank"
+            <button
+              onClick={() => window.open('https://npkav.dev/resume.pdf', '_blank')}
               className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500"
             >
               <FaFolder />
-            </a>
+            </button>
           </li>
           <li>
-            <a
-              href="https://www.linkedin.com/in/npkav/"
-              target="_blank"
+            <button
+              onClick={() => window.open('https://www.linkedin.com/in/npkav/', '_blank')}
               className="text-xl opacity-40 transition-all duration-300 hover:opacity-100"
             >
               <FaLinkedin />
-            </a>
+            </button>
           </li>
           <li>
-            <a
-              href="https://bsky.app/profile/npkav.bsky.social"
-              target="_blank"
+            <button
+              onClick={() => window.open('https://bsky.app/profile/npkav.bsky.social', '_blank')}
               className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500"
             >
               <FaBluesky />
-            </a>
+            </button>
           </li>
         </ul>
 
@@ -103,62 +111,55 @@ const Navbar = () => {
         <div className="mt-4">
           <ul className="flex flex-col items-center gap-4">
             <li>
-              <a
-                href="#technologies"
+              <button
+                onClick={() => scrollToSection('technologies')}
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
-                onClick={toggleMenu}
               >
                 [technologies]
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#projects"
+              <button
+                onClick={() => scrollToSection('projects')}
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
-                onClick={toggleMenu}
               >
                 [projects]
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#contact"
+              <button
+                onClick={() => scrollToSection('contact')}
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
-                onClick={toggleMenu}
               >
                 [contact]
-              </a>
+              </button>
             </li>
             {/* mobile social icons */}
             <div className="grid grid-cols-4 gap-4 mt-4">
-              <a
-                href="https://github.com/npkav"
-                target="_blank"
+              <button
+                onClick={() => window.open('https://github.com/npkav', '_blank')}
                 className="text-xl opacity-40 transition-all duration-300 hover:opacity-100"
               >
                 <FaGithub />
-              </a>
-              <a
-                href="https://npkav.dev/resume.pdf"
-                target="_blank"
+              </button>
+              <button
+                onClick={() => window.open('https://npkav.dev/resume.pdf', '_blank')}
                 className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500"
               >
                 <FaFolder />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/npkav/"
-                target="_blank"
+              </button>
+              <button
+                onClick={() => window.open('https://www.linkedin.com/in/npkav/', '_blank')}
                 className="text-xl opacity-40 transition-all duration-300 hover:opacity-100"
               >
                 <FaLinkedin />
-              </a>
-              <a
-                href="https://bsky.app/profile/npkav.bsky.social"
-                target="_blank"
+              </button>
+              <button
+                onClick={() => window.open('https://bsky.app/profile/npkav.bsky.social', '_blank')}
                 className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500"
               >
                 <FaBluesky />
-              </a>
+              </button>
             </div>
           </ul>
         </div>
