@@ -24,11 +24,11 @@ function App() {
         <div id="home">
           <Hero />
         </div>
-        <div id="projects">
-          <Projects />
-        </div>
         <div id="technologies">
           <Technologies />
+        </div>
+        <div id="projects">
+          <Projects />
         </div>
         <div id="contact">
           <Contact />
