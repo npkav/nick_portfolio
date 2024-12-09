@@ -91,7 +91,7 @@ const Navbar = () => {
         </ul>
 
         {/* mobile menu button */}
-        <button className="text-xl md:hidden" onClick={toggleMenu}>
+        <button className="text-xl md:hidden opacity-40 transition-all duration-300 hover:opacity-100" onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
