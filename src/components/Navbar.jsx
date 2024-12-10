@@ -25,11 +25,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-10 flex w-full flex-col items-center justify-between border-b border-b-gray-700 bg-slate-950/90 px-16 py-6 text-white backdrop-blur-md">
+    <nav className="fixed top-0 z-10 flex w-full flex-col items-center justify-between bg-slate-950/90 px-16 py-6 text-white backdrop-blur-md">
       <div className="flex w-full items-center justify-between md:justify-evenly">
         <button
           onClick={() => scrollToSection('home')}
-          className="bg-gradient-to-r from-sky-500 from-20% via-yellow-500 via-50% to-pink-500 bg-clip-text text-3xl font-semibold text-transparent opacity-80 transition-all duration-300 hover:opacity-100"
+          className="bg-gradient-to-r from-sky-500 from-20% via-yellow-500 via-50% to-pink-500 bg-clip-text text-3xl font-semibold text-transparent opacity-80 transition-all duration-300 hover:opacity-100 hover:scale-105"
         >
           [npkav.dev]
         </button>
@@ -39,7 +39,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => scrollToSection('technologies')}
-              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500"
+              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500 hover:scale-105"
             >
               [technologies]
             </button>
@@ -47,7 +47,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500"
+              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500 hover:scale-105"
             >
               [projects]
             </button>
@@ -55,7 +55,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-pink-500"
+              className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-pink-500 hover:scale-105"
             >
               [contact]
             </button>
@@ -67,7 +67,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => window.open('https://github.com/npkav', '_blank')}
-              className="text-xl opacity-40 transition-all duration-300 hover:opacity-100"
+              className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-110"
             >
               <FaGithub />
             </button>
@@ -75,7 +75,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => window.open('https://npkav.dev/resume.pdf', '_blank')}
-              className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500"
+              className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500 hover:scale-110"
             >
               <FaFolder />
             </button>
@@ -83,7 +83,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => window.open('https://www.linkedin.com/in/npkav/', '_blank')}
-              className="text-xl opacity-40 transition-all duration-300 hover:opacity-100"
+              className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-110"
             >
               <FaLinkedin />
             </button>
@@ -91,7 +91,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => window.open('https://bsky.app/profile/npkav.bsky.social', '_blank')}
-              className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500"
+              className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500 hover:scale-110"
             >
               <FaBluesky />
             </button>
@@ -113,7 +113,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection('technologies')}
-                className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
+                className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-105"
               >
                 [technologies]
               </button>
@@ -121,7 +121,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection('projects')}
-                className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
+                className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-105"
               >
                 [projects]
               </button>
@@ -129,7 +129,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-lg opacity-40 transition-all duration-300 hover:opacity-100"
+                className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-105"
               >
                 [contact]
               </button>
@@ -138,25 +138,25 @@ const Navbar = () => {
             <div className="grid grid-cols-4 gap-4 mt-4">
               <button
                 onClick={() => window.open('https://github.com/npkav', '_blank')}
-                className="text-xl opacity-40 transition-all duration-300 hover:opacity-100"
+                className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-110"
               >
                 <FaGithub />
               </button>
               <button
                 onClick={() => window.open('https://npkav.dev/resume.pdf', '_blank')}
-                className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500"
+                className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500 hover:scale-110"
               >
                 <FaFolder />
               </button>
               <button
                 onClick={() => window.open('https://www.linkedin.com/in/npkav/', '_blank')}
-                className="text-xl opacity-40 transition-all duration-300 hover:opacity-100"
+                className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-110"
               >
                 <FaLinkedin />
               </button>
               <button
                 onClick={() => window.open('https://bsky.app/profile/npkav.bsky.social', '_blank')}
-                className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500"
+                  className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500 hover:scale-105"
               >
                 <FaBluesky />
               </button>
