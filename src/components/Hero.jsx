@@ -16,7 +16,7 @@ const Hero = () => {
           <img
             src={profile}
             alt=""
-            className="w-[150px] h-[150px] cursor-pointer hover:-translate-y-5 hover:scale-105 transition-all duration-300 md:w-[250px] md:h-[250px] object-cover mt-10"
+            className="w-[150px] h-[150px] cursor-pointer hover:scale-105 transition-all duration-300 md:w-[250px] md:h-[250px] object-cover mt-10"
           />
         </motion.div>
 
