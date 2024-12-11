@@ -8,59 +8,79 @@ import { SiFigma } from "react-icons/si";
 import { SiWebrtc } from "react-icons/si";
 import { SiTrello } from "react-icons/si";
 import { SiAffinityphoto } from "react-icons/si";
+import { motion } from "framer-motion";
 
-const technologiesData = [
+const techData = [
   {
     icon: BiLogoPython,
-    name: "Python"
+    name: "Python",
+    indexNo: 0
   },
   {
     icon: SiJavascript,
-    name: "JavaScript"
+    name: "JavaScript",
+    indexNo: 1
   },
   {
     icon: SiReact,
-    name: "React"
+    name: "React",
+    indexNo: 2
   },
   {
     icon: SiTailwindcss,
-    name: "Tailwind CSS"
+    name: "Tailwind CSS",
+    indexNo: 3
   },
   {
     icon: SiBootstrap,
-    name: "Bootstrap"
+    name: "Bootstrap",
+    indexNo: 4
   },
   {
     icon: SiWebrtc,
-    name: "WebRTC"
+    name: "WebRTC",
+    indexNo: 5
   },
   {
     icon: SiGit,
-    name: "Git"
+    name: "Git",
+    indexNo: 6
   },
   {
     icon: SiFigma,
-    name: "Figma"
+    name: "Figma",
+    indexNo: 7
   },
   {
     icon: SiTrello,
-    name: "Trello"
+    name: "Trello",
+    indexNo: 8
   },
   {
     icon: SiAffinityphoto,
-    name: "Affinity Photo"
+    name: "Affinity Photo",
+    indexNo: 9
   }
 ];
 
-const TechnologyCard = ({ Icon, name }) => (
-  <div className="flex flex-col items-center group">
+const TechnologyCard = ({ Icon, name, indexNo }) => (
+  <motion.div
+    initial={{ y: -100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{
+      duration: 1,
+      delay: indexNo * 0.2,
+      bounce: 0.5
+    }}
+    className="flex flex-col items-center group"
+  >
     <div className="text-[50px] sm:text-[75px] md:text-[100px] cursor-pointer opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
       <Icon />
     </div>
     <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm mt-2">
       {name}
     </span>
-  </div>
+  </motion.div>
 );
 
 const Technologies = () => {
@@ -69,10 +89,20 @@ const Technologies = () => {
       id="technologies"
       className="flex min-h-[100vh] w-full max-w-[800px] mx-auto flex-col items-center justify-center gap-4 md:gap-8 text-white pt-20"
     >
-      <h1 className="text-4xl opacity-80">Technologies</h1>
+      <motion.h1
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 0.8 }}
+        transition={{ 
+          duration: 1,
+          delay: 2
+        }}
+        className="text-4xl opacity-80"
+      >
+        Technologies
+      </motion.h1>
       <div className="flex flex-wrap items-center justify-center gap-12 p-5">
-        {technologiesData.map((tech, index) => (
-          <TechnologyCard key={index} Icon={tech.icon} name={tech.name} />
+        {techData.map((tech) => (
+          <TechnologyCard key={tech.indexNo} Icon={tech.icon} name={tech.name} indexNo={tech.indexNo} />
         ))}
       </div>
     </div>
