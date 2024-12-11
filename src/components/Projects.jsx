@@ -55,7 +55,7 @@ const ProjectCard = ({ project }) => (
 
 const Projects = () => {
   return (
-    <div id="projects" className="flex min-h-[70vh] w-full max-w-[1200px] mx-auto flex-col items-center justify-center gap-4 md:gap-8 p-4 text-white">
+    <div id="projects" className="flex min-h-[100vh] w-full max-w-[800px] mx-auto flex-col items-center justify-center gap-4 md:gap-8 text-white pt-36">
       <h1 className="text-4xl opacity-80">Projects</h1>
       <div className="flex flex-wrap items-center justify-center gap-12 p-5">
         {projectsData.map((project, index) => (

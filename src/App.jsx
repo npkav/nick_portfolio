@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -21,18 +22,12 @@ function App() {
       />
       <main className="relative z-10 flex flex-col items-center px-4 md:px-8 lg:px-16">
         <Navbar />
-        <div id="home">
-          <Hero />
-        </div>
-        <div id="technologies">
-          <Technologies />
-        </div>
-        <div id="projects">
-          <Projects />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/technologies" element={<Technologies />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
     </div>
   )

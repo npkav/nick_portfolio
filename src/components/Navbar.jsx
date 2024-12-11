@@ -4,6 +4,7 @@ import { FaBluesky } from "react-icons/fa6";
 import { FaFolder } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,90 +12,86 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
-  /* scroll to section function */
-  const scrollToSection = (sectionId) => {
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-    setIsMenuOpen(false);
-  };
 
   return (
     <nav className="fixed top-0 z-10 flex w-full flex-col items-center justify-between bg-slate-950/90 px-16 py-6 text-white backdrop-blur-md">
       <div className="flex w-full items-center justify-between md:justify-evenly">
-        <button
-          onClick={() => scrollToSection('home')}
+        <Link
+          to="/"
           className="bg-gradient-to-r from-sky-500 from-20% via-yellow-500 via-50% to-pink-500 bg-clip-text text-3xl font-semibold text-transparent opacity-80 transition-all duration-300 hover:opacity-100 hover:scale-105"
         >
           [npkav.dev]
-        </button>
+        </Link>
 
         {/* regular navigation */}
         <ul className="hidden md:flex gap-10">
           <li>
-            <button
-              onClick={() => scrollToSection('technologies')}
+            <Link
+              to="/technologies"
               className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500 hover:scale-105"
             >
               [technologies]
-            </button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => scrollToSection('projects')}
+            <Link
+              to="/projects"
               className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500 hover:scale-105"
             >
               [projects]
-            </button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => scrollToSection('contact')}
+            <Link
+              to="/contact"
               className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:text-pink-500 hover:scale-105"
             >
               [contact]
-            </button>
+            </Link>
           </li>
         </ul>
 
         {/* social icons */}
         <ul className="hidden md:grid grid-cols-2 gap-4">
           <li>
-            <button
-              onClick={() => window.open('https://github.com/npkav', '_blank')}
+            <a
+              href="https://github.com/npkav"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-110"
             >
               <FaGithub />
-            </button>
+            </a>
           </li>
           <li>
-            <button
-              onClick={() => window.open('https://npkav.dev/resume.pdf', '_blank')}
+            <a
+              href="https://npkav.dev/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500 hover:scale-110"
             >
               <FaFolder />
-            </button>
+            </a>
           </li>
           <li>
-            <button
-              onClick={() => window.open('https://www.linkedin.com/in/npkav/', '_blank')}
+            <a
+              href="https://www.linkedin.com/in/npkav/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-110"
             >
               <FaLinkedin />
-            </button>
+            </a>
           </li>
           <li>
-            <button
-              onClick={() => window.open('https://bsky.app/profile/npkav.bsky.social', '_blank')}
+            <a
+              href="https://bsky.app/profile/npkav.bsky.social"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500 hover:scale-110"
             >
               <FaBluesky />
-            </button>
+            </a>
           </li>
         </ul>
 
@@ -111,55 +108,66 @@ const Navbar = () => {
         <div className="mt-4">
           <ul className="flex flex-col items-center gap-4">
             <li>
-              <button
-                onClick={() => scrollToSection('technologies')}
+              <Link
+                to="/technologies"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-105"
               >
                 [technologies]
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection('projects')}
+              <Link
+                to="/projects"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-105"
               >
                 [projects]
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection('contact')}
+              <Link
+                to="/contact"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-lg opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-105"
               >
                 [contact]
-              </button>
+              </Link>
             </li>
             {/* mobile social icons */}
             <div className="grid grid-cols-4 gap-4 mt-4">
-              <button
-                onClick={() => window.open('https://github.com/npkav', '_blank')}
+              <a
+                href="https://github.com/npkav"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-110"
               >
                 <FaGithub />
-              </button>
-              <button
-                onClick={() => window.open('https://npkav.dev/resume.pdf', '_blank')}
+              </a>
+              <a
+                href="https://npkav.dev/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-yellow-500 hover:scale-110"
               >
                 <FaFolder />
-              </button>
-              <button
-                onClick={() => window.open('https://www.linkedin.com/in/npkav/', '_blank')}
+              </a>
+              <a
+                href="https://www.linkedin.com/in/npkav/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:scale-110"
               >
                 <FaLinkedin />
-              </button>
-              <button
-                onClick={() => window.open('https://bsky.app/profile/npkav.bsky.social', '_blank')}
-                  className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500 hover:scale-105"
+              </a>
+              <a
+                href="https://bsky.app/profile/npkav.bsky.social"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl opacity-40 transition-all duration-300 hover:opacity-100 hover:text-sky-500 hover:scale-110"
               >
                 <FaBluesky />
-              </button>
+              </a>
             </div>
           </ul>
         </div>

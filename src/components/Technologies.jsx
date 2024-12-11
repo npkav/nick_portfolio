@@ -67,7 +67,7 @@ const Technologies = () => {
   return (
     <div
       id="technologies"
-      className="flex min-h-[70vh] w-full max-w-[800px] mx-auto flex-col items-center justify-center gap-4 md:gap-8 text-white"
+      className="flex min-h-[100vh] w-full max-w-[800px] mx-auto flex-col items-center justify-center gap-4 md:gap-8 text-white pt-20"
     >
       <h1 className="text-4xl opacity-80">Technologies</h1>
       <div className="flex flex-wrap items-center justify-center gap-12 p-5">
