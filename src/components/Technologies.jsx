@@ -70,7 +70,6 @@ const TechnologyCard = ({ Icon, name, indexNo }) => (
     transition={{
       duration: 1,
       delay: indexNo * 0.2,
-      bounce: 0.5
     }}
     className="flex flex-col items-center group"
   >
