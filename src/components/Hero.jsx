@@ -16,7 +16,7 @@ const Hero = () => {
           <img
             src={profile}
             alt=""
-            className="w-[150px] h-[150px] cursor-pointer hover:scale-105 transition-all duration-300 md:w-[250px] md:h-[250px] object-cover mt-10"
+            className="w-[150px] h-[150px] cursor-pointer hover:scale-105 transition-all duration-300 md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] object-cover mt-10"
           />
         </motion.div>
 
@@ -26,14 +26,14 @@ const Hero = () => {
           transition={{ duration: 0.66, delay: 0.2 }}
           className="flex max-w-[800px] flex-col items-center justify-center gap-3 text-center"
         >
-          <h1 className="text-4xl opacity-80">Hi, I'm Nick.</h1>
+          <h1 className="text-4xl opacity-80 md:text-5xl lg:text-6xl">Hi, I'm Nick.</h1>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.66, delay: 0.5 }}
             className="flex max-w-[800px] flex-col items-center justify-center gap-3 text-center"
           >
-            <p className="text-lg opacity-60">
+            <p className="text-lg opacity-60 md:text-xl lg:text-2xl">
               I'm a student software developer and multimedia engineer with a passion
               for audio interfacing software. I am experienced in various
               technologies such as Python, React, Tailwind, and Motion as well as

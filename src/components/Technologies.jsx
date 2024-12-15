@@ -95,11 +95,11 @@ const Technologies = () => {
           duration: 1,
           delay: 2
         }}
-        className="text-4xl opacity-80"
+        className="text-4xl opacity-80 md:text-5xl lg:text-6xl"
       >
         Technologies
       </motion.h1>
-      <div className="flex flex-wrap items-center justify-center gap-12 p-5">
+      <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-12 p-5">
         {techData.map((tech) => (
           <TechnologyCard key={tech.indexNo} Icon={tech.icon} name={tech.name} indexNo={tech.indexNo} />
         ))}

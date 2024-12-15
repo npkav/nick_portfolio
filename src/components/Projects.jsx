@@ -80,7 +80,7 @@ const Projects = () => {
         transition={{ 
           duration: 2,
         }}
-        className="text-4xl opacity-80"
+        className="text-4xl opacity-80 md:text-5xl lg:text-6xl"
       >
         Projects
       </motion.h1>
